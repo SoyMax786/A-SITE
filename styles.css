@@ -1,0 +1,321 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0072ff, #00c6ff, #003cb3, #00bfff); /* Enhanced gradient with multiple shades */
+    background-size: 400% 400%; /* Smooth gradient animation effect */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientBG 10s ease infinite; /* Animate gradient */
+}
+
+/* Keyframes for animated gradient background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main container for content */
+#main-container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque for better clarity */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Depth effect */
+    backdrop-filter: blur(12px); /* Frosted glass blur */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Transparent border */
+    outline: 4px solid rgba(0, 198, 255, 0.4); /* Glowing effect outline */
+    outline-offset: -5px; /* Push the glowing effect closer to the border */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+}
+
+#main-container:hover {
+    border: 2px solid rgba(0, 198, 255, 0.6); /* Slightly brighter border on hover */
+    outline: 6px solid rgba(0, 198, 255, 0.6); /* Enhanced glowing effect on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(135deg, rgba(0, 114, 255, 0.3), rgba(0, 198, 255, 0.2));
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Enhanced text shadow for better visibility */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+/* Input fields and buttons */
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    margin: 10px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 198, 255, 0.2); /* Transparent water-blue input background */
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #0072ff, #00c6ff); /* Water-blue gradient button */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    transform: translateY(-2px);
+}
+
+/* General content fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Highlight input fields on focus */
+input[type="text"]:focus {
+    border: 2px solid rgba(0, 198, 255, 0.8); /* Bright border glow */
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.8); /* Outer glow effect */
+    background: rgba(0, 198, 255, 0.3); /* Slightly brighter background on focus */
+    transition: all 0.2s ease-in-out; /* Smooth transition effect */
+}
+
+/* Style for delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    color: #e60000;
+}
+
+/* Task List Styles */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 10px 0;
+    background-color: rgba(0, 198, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Fade-in and fade-out animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Styling for delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: #e60000;
+    transform: scale(1.2);
+}
+
+
+/* Fade in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Fade out effect */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Styling for delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+    color: #e60000;
+    transform: scale(1.2);
+}
+
+/* Subtle input box style */
+input[type="text"] {
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(0, 198, 255, 0.15);
+    width: 80%;
+    transition: background 0.2s ease;
+}
+
+/* Task input field focus effect */
+input[type="text"]:focus {
+    background: rgba(0, 198, 255, 0.25);
+    border: 2px solid rgba(0, 198, 255, 0.8);
+    outline: none;
+}
+
+/* Prevent elements from sliding off-screen */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Main container for content */
+#main-container {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    outline: 4px solid rgba(0, 198, 255, 0.4);
+    outline-offset: -5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px; /* Add a little space at the bottom */
+}
+
+/* Make sure tasks don't overflow off screen */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px; /* Ensure no overflow */
+    overflow-y: auto;
+}
+
+/* Style for tasks */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    opacity: 0.7;
+}
+
+/* Styling for saved tasks page */
+#saved-tasks {
+    text-align: center;
+    padding: 20px;
+}
+
+#saved-task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#saved-task-list .task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager & AI Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>Welcome to InnovateX 2.0</h1>
+            <p>Your AI-powered daily assistant</p>
+        </section>
+
+        <!-- Task Manager Section -->
+        <section id="task-manager">
+            <h2>My Daily Tasks</h2>
+            <ul id="task-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button id="add-task-btn">Add Task</button>
+            <button id="view-saved-tasks-btn">View Saved Tasks</button>
+        </section>
+
+        <!-- Daily Motivational Tip Section -->
+        <section id="motivational-tip">
+            <h2>Daily Motivational Tip</h2>
+            <p id="quote"></p>
+        </section>
+
+        <!-- AI Helper Section -->
+        <section id="ai-helper">
+            <h2>Ask the AI Helper</h2>
+            <input type="text" id="user-query" placeholder="Ask something...">
+            <button id="ask-btn">Ask</button>
+            <div id="ai-response"></div>
+        </section>
+
+        <!-- Reminder Popup Section -->
+        <div id="reminder-popup">
+            <p id="reminder-msg">Your reminder message here!</p>
+            <button id="close-popup-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Tasks - InnovateX 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <section id="saved-tasks">
+            <h2>Saved Tasks</h2>
+            <ul id="saved-task-list">
+                <!-- Saved tasks will be dynamically loaded here -->
+            </ul>
+            <button id="go-back-btn">Go Back to Main Page</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load saved tasks from localStorage
+        window.addEventListener("load", function() {
+            const savedTaskList = document.getElementById("saved-task-list");
+            const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+            tasks.forEach(task => {
+                const taskItem = document.createElement("li");
+                taskItem.textContent = task;
+                savedTaskList.appendChild(taskItem);
+            });
+        });
+
+        // Go back to main page
+        document.getElementById("go-back-btn").addEventListener("click", function() {
+            window.location.href = "index.html";  // Go back to the main page
+        });
+    </script>
+</body>
+</html>
